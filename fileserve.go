@@ -15,6 +15,6 @@ func main() {
     host = *address + ":" + strconv.Itoa(*port)
   )
   flag.Parse()
-  fmt.Printf("Serving %s at %s", *path, host)
+  fmt.Printf("Serving %s at %s\n", *path, host)
   http.ListenAndServe(host, http.FileServer(http.Dir(*path)))
 }
